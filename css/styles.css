@@ -14,7 +14,7 @@ input {
 
 .selectColour {
     padding:15px;
-    width: 200px;
+    width: 250px;
     max-width: 250px;
 }
 
@@ -23,6 +23,7 @@ button {
     border: none;
     color: rgb(12, 0, 0);
     padding: 15px;
+    width: 70px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -50,12 +51,11 @@ button {
     background-color: purple;
 }
 
-
 .name {
     margin-left: 10px;
     margin-right: 10px;
     padding: 15px;
-    width: 200px;
+    width: 250px;
     max-width: 250px;
     min-height: 90px;
 }
@@ -63,7 +63,7 @@ button {
 .bdayAge {
     padding: 15px;
     width: 250px;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 #titleName {
@@ -81,4 +81,8 @@ button {
 
 span {
     border: solid
+}
+
+img {
+    max-width: 70%;
 }
