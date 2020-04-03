@@ -9,20 +9,24 @@
 
 <body>
 	<h1 id='titleName'>Wish someone a Happy Birthday!</h1>
-	<div class='container'>
+	<div class='inputContainer'>
 		<div class="selectColour">
 			<h3>Colour of your wish:</h3>
 			<div>
-				<button id="Red">Red</button><button id="Blue">Blue</button><button id="Green">Green</button>
+				<button id="Red">Red</button><button id="Blue">Blue</button>
 			</div>
 			<div>
-				<button id="Orange">Orange</button><button id="Purple">Purple</button><button id="Pink">Pink</button>
+				<button id="Green">Green</button><button id="Pink">Pink</button>
+            </div>
+            <div>
+				<button id="Orange">Orange</button><button id="Purple">Purple</button>
 			</div>
 		</div>
 
 		<div class='name'>
 			<h3>The wishee's name:</h3>
 			<div id="enter-name">
+                <input type='text' id='nameView' value=""></input> 
 			</div>
         </div>
         
@@ -33,7 +37,7 @@
             <!--calculate(ordinal-suffix);"></input>-->
 		</div>
 	</div>
-	<div class='container'>
+	<div class='outputContainer'>
 		<div class='wish'>
             <button id='generateWish'>Generate Wish</button><br/>
             <h2 id='rollUnder'>Here is your wish! Take a picture and share it!</h2>
