@@ -1,1 +1,54 @@
-<h1>Happy Birthday!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href="css/styles.css" type='text/css' />
+	<title>Birthday Wish</title>
+</head>
+
+<body>
+	<h1 id='titleName'>Wish someone a Happy Birthday!</h1>
+	<div class='container'>
+		<div class="select-colour">
+			<h3>Colour of your wish:</h3>
+			<div>
+				<button id="Red">Red</button><button id="Blue">Blue</button><button id="Green">Green</button>
+			</div>
+			<div>
+				<button id="Orange">Orange</button><button id="Purple">Purple</button><button id="Pink">Pink</button>
+			</div>
+		</div>
+
+		<div class='name'>
+			<h3>The wishee's name:</h3>
+			<div id="enter-name">
+			</div>
+        </div>
+        
+		<div class='bdayAge'>
+			<h3>Their age on their birthday:</h3>
+			<input id="age" min=1 max=150 type="range" value=1 onchange="displayValue('ageView', this.value);"></input>
+            <input type='number' id='ageView' value="" onchange="age.value = this.value;"></input> 
+            <!--calculate(underIsTrue);"></input>-->
+		</div>
+	</div>
+	<div class='container'>
+		<div class='wish'>
+            <button id='generateWish'>Generate Wish</button><br/>
+            <h2 id='rollUnder'>Here is your wish! Take a picture and share it!</h2>
+            <img id="banner" src="pictures/banner.jpg">
+            <span id="wishView"></span>
+            <img id="banner" src="pictures/cake-and-presents.jpg">
+
+			
+		</div>
+	</div>
+
+
+	</div>
+	<h6>*working title</h6>
+</body>
+	<script type="text/javascript" src="js/diceroller.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+</html>
