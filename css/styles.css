@@ -1,19 +1,39 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    background: rgb(255,252,169);
-    background: linear-gradient(45deg, 
-        rgba(255,252,169,0.9990371148459384) 0%, 
-        rgba(255,242,114,1) 50%, 
-        rgba(255,252,169,1) 100%);
+html {
+    min-height: 100%;
+    position: relative;
 }
 
-.inputContainer {
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: linear-gradient(45deg, 
+        rgba(255,252,169,1) 0%, 
+        rgba(255,242,114,1) 50%, 
+        rgba(255,252,169,1) 100%);
+    height: 100%;
+}
+
+#titleHeader {
+    text-align: center;
+}
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding; 0 20px;
     text-align: center;
+}
+
+#bottom {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.inputSection {
+    padding:15px;
+    width: 250px;
+    max-width: 250px;
 }
 
 input {
@@ -21,21 +41,17 @@ input {
     margin: 8px;
 }
 
-.selectColour {
-    padding:15px;
-    width: 250px;
-    max-width: 250px;
+#range {
+    cursor: pointer;
 }
 
 button {
     background-color: rgb(204, 180, 180);
     border: none;
     border-radius: 8px;
-    color: rgb(12, 0, 0);
     padding: 12px;
     width: 82px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
@@ -60,36 +76,6 @@ button {
 #Purple {
     background-color: purple;
 }
-
-.name {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 15px;
-    width: 250px;
-    max-width: 250px;
-    min-height: 90px;
-}
-
-.bdayAge {
-    padding: 15px;
-    width: 250px;
-    max-width: 250px;
-}
-
-#titleName {
-    text-align: center;
-}
-
-.outputContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding; 0 20px;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
 #generateWish {
     width: 94px;
 }
@@ -100,10 +86,10 @@ span {
 }
 
 img {
-    max-width: 300px;
+    max-width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
-    width: 50%;
+    margin-top: 10px;
+    width: 60%;
 }
