@@ -11,22 +11,22 @@
 	<h1 id="titleHeader">Wish someone a Happy Birthday!!</h1>
 	<div id="top" class="container">
 		<div class="inputSection">
-			<h3>Colour:</h3>
-			<button id="Red">Red</button><button id="Blue">Blue</button></br>
-			<button id="Green">Green</button><button id="Pink">Pink</button></br>
-			<button id="Orange">Orange</button><button id="Purple">Purple</button>
-			
-		</div>
-
-		<div class="inputSection">
 			<h3>Name:</h3>
             <input id="name" type="text" value=""></input> 
         </div>
         
 		<div class="inputSection">
 			<h3>Age:</h3>
-			<input id="ageSlider" type="range" min=1 max=150 value=1 onchange="displayValue('age', this.value);"></input>
+			<input id="ageSlider" type="range" min=1 max=150 value=1 class="slider" onchange="displayValue('age', this.value);"></input>
             <input id="age" type="number" value="" onchange="ageSlider.value = this.value;"></input>
+		</div>
+
+		<div class="inputSection">
+			<h3>Colour:</h3>
+			<button id="Red">Red</button><button id="Blue">Blue</button></br>
+			<button id="Green">Green</button><button id="Pink">Pink</button></br>
+			<button id="Orange">Orange</button><button id="Purple">Purple</button>
+			
 		</div>
 	</div>
 

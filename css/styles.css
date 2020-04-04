@@ -25,6 +25,10 @@ body {
     text-align: center;
 }
 
+#top {
+    align-items: flex-start
+}
+
 #bottom {
     flex-direction: column;
     margin-bottom: 20px;
@@ -41,13 +45,14 @@ input {
     margin: 8px;
 }
 
-#range {
+#ageSlider {
     cursor: pointer;
 }
 
 button {
     background-color: rgb(204, 180, 180);
-    border: none;
+    border: 2px solid white;
+    color: white;
     border-radius: 8px;
     padding: 12px;
     width: 82px;
@@ -56,6 +61,12 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    transition-duration: 0.4s;
+    transition-property: transform, color, border;
+}
+
+button:hover {
+    color: black;
 }
 
 #Red {
@@ -78,6 +89,8 @@ button {
 }
 #generateWish {
     width: 94px;
+    color: black;
+    border: 2px solid rgb(204, 180, 180);
 }
 
 span {
