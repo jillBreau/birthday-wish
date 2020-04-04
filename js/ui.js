@@ -5,9 +5,9 @@ function displayValue(element, value) {
 }
 
 function generateWish() {
-    var name = document.getElementById('name').value;
-    var age = document.getElementById('age').value;
-    var ageSuffix = ordinalSuffix(age);
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const ageSuffix = ordinalSuffix(age);
     
     document.getElementById('wishPrompt').innerHTML = "Here is your wish! Take a picture and share it!";
     document.getElementById('topImage').src = "pictures/banner.png";
@@ -35,13 +35,25 @@ function ordinalSuffix(i) {
     return i + "th";
 }
 
-Red.onclick = () => setWishColour('red');
-Blue.onclick = () => setWishColour('blue');
-Green.onclick = () => setWishColour('green');
-Pink.onclick = () => setWishColour('magenta');
-Orange.onclick = () => setWishColour('orangered');
-Purple.onclick = () => setWishColour('purple');
+Red.onclick = () => setColour('Red', 'red');
+Blue.onclick = () => setColour('Blue', 'blue');
+Green.onclick = () => setColour('Green', 'green');
+Pink.onclick = () => setColour('Pink', 'magenta');
+Orange.onclick = () => setColour('Orange', 'orangered');
+Purple.onclick = () => setColour('Purple', 'purple');
 
-function setWishColour(colour) {
+function setColour(button, colour) {
+    resetButtons();
+    document.getElementById(button).style.border = '2px solid black';
+    document.getElementById(button).style.color = 'black'
     wish.style.color = colour;
+}
+
+function resetButtons() {
+    const colourButtons = ["Red", "Blue", "Green", "Pink", "Orange", "Purple"]
+
+    for (button of colourButtons) {
+        document.getElementById(button).style.border = `2px solid white`;
+        document.getElementById(button).style.color = 'white'
+    }
 }
