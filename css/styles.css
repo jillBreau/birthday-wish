@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: Helvetica, Arial, sans-serif;
     background: rgb(255,252,169);
     background: linear-gradient(45deg, 
@@ -29,8 +28,9 @@ input {
 }
 
 button {
-    background-color: rosybrown;
+    background-color: rgb(204, 180, 180);
     border: none;
+    border-radius: 8px;
     color: rgb(12, 0, 0);
     padding: 15px;
     width: 70px;
@@ -81,6 +81,15 @@ button {
 }
 
 .outputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding; 0 20px;
+    text-align: center;
+}
+
+.wish {
     display: flex;
     flex-direction: column;
     justify-content: center;
