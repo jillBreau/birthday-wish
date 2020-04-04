@@ -32,8 +32,8 @@ button {
     border: none;
     border-radius: 8px;
     color: rgb(12, 0, 0);
-    padding: 15px;
-    width: 70px;
+    padding: 12px;
+    width: 82px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -84,28 +84,26 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     padding; 0 20px;
     text-align: center;
-}
-
-.wish {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding; 0 20px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 #generateWish {
-    width: 90px;
+    width: 94px;
 }
 
 span {
-    border: solid
+    font-size: 22px;
+    font-weight: bold;
 }
 
 img {
     max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 50%;
 }
