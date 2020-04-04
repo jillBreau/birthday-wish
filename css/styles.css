@@ -1,3 +1,13 @@
+body
+{
+    font-family: Helvetica, Arial, sans-serif;
+    background: rgb(255,252,169);
+    background: linear-gradient(45deg, 
+        rgba(255,252,169,0.9990371148459384) 0%, 
+        rgba(255,242,114,1) 50%, 
+        rgba(255,252,169,1) 100%);
+}
+
 .inputContainer {
     display: flex;
     flex-direction: row;
@@ -77,6 +87,10 @@ button {
     flex-wrap: wrap;
     padding; 0 20px;
     text-align: center;
+}
+
+#generateWish {
+    width: 90px;
 }
 
 span {
