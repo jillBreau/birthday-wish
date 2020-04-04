@@ -1,26 +1,28 @@
-var age = document.getElementById("age")
-var enterName = document.getElementById("enterName")
-var generateWish = document.getElementById("generateWish")
+var wish = document.getElementById('wish')
 
 function displayValue(element, value) {
     document.getElementById(element).value = value;
 }
 
-function generateMessage() {
-    console.log("!!!!!!!!!!!!!!!!")
-    var name = document.getElementById('nameView').value;
-    console.log(name)
-    var age = document.getElementById('ageView').value;
+function generateWish() {
+    var name = document.getElementById('name').value;
+    var age = document.getElementById('age').value;
     var ageSuffix = ordinalSuffix(age);
     
-    var wish = document.getElementById('wishView')
-    wish.innerHTML = `Happy ${ageSuffix} Birthday ${name}!!`
-    wish.style.color = color
+    document.getElementById('wishPrompt').innerHTML = "Here is your wish! Take a picture and share it!";
+    document.getElementById('topImage').src = "pictures/banner.png";
+    document.getElementById('bottomImage').src = "pictures/balloons.png";
+
+    wish.innerHTML = `Happy ${ageSuffix} Birthday ${name}!!`;
+
 }
 
 function ordinalSuffix(i) {
-    var j = i % 10,
-        k = i % 100;
+    var j = i % 10;
+    var k = i % 100;
+    if (i == 0) {
+        return "";
+    }
     if (j == 1 && k != 11) {
         return i + "st";
     }
@@ -33,31 +35,13 @@ function ordinalSuffix(i) {
     return i + "th";
 }
 
+Red.onclick = () => setWishColour('red');
+Blue.onclick = () => setWishColour('blue');
+Green.onclick = () => setWishColour('green');
+Pink.onclick = () => setWishColour('magenta');
+Orange.onclick = () => setWishColour('orangered');
+Purple.onclick = () => setWishColour('purple');
 
-Red.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'red'
+function setWishColour(colour) {
+    wish.style.color = colour;
 }
-Blue.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'blue'
-}
-Green.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'green'
-}
-Pink.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'magenta'
-}
-Orange.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'orangered'
-}
-Purple.onclick = function() {
-    var wish = document.getElementById('wishView')
-    wish.style.color = 'purple'
-}
-
-
-document.getElementById("ageView").value = age.value;

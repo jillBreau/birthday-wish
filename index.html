@@ -3,50 +3,41 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel='stylesheet' href="css/styles.css" type='text/css' />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
 	<title>Birthday Wish</title>
 </head>
 
 <body>
-	<h1 id='titleName'>Wish someone a Happy Birthday!!!</h1>
-	<div class='inputContainer'>
-		<div class="selectColour">
-			<h3>Colour of your wish:</h3>
-			<div>
-				<button id="Red">Red</button><button id="Blue">Blue</button>
-			</div>
-			<div>
-				<button id="Green">Green</button><button id="Pink">Pink</button>
-            </div>
-            <div>
-				<button id="Orange">Orange</button><button id="Purple">Purple</button>
-			</div>
+	<h1 id="titleHeader">Wish someone a Happy Birthday!!</h1>
+	<div id="top" class="container">
+		<div class="inputSection">
+			<h3>Colour:</h3>
+			<button id="Red">Red</button><button id="Blue">Blue</button></br>
+			<button id="Green">Green</button><button id="Pink">Pink</button></br>
+			<button id="Orange">Orange</button><button id="Purple">Purple</button>
+			
 		</div>
 
-		<div class='name'>
-			<h3>The wishee's name:</h3>
-			<div id="enterName">
-                <input type='text' id='nameView' value=""></input> 
-			</div>
+		<div class="inputSection">
+			<h3>Name:</h3>
+            <input id="name" type="text" value=""></input> 
         </div>
         
-		<div class='bdayAge'>
-			<h3>Their age on their birthday:</h3>
-			<input id="age" min=1 max=150 type="range" value=1 onchange="displayValue('ageView', this.value);"></input>
-            <input type='number' id='ageView' value="" onchange="age.value = this.value;"></input> 
-            <!--calculate(ordinal-suffix);"></input>-->
+		<div class="inputSection">
+			<h3>Age:</h3>
+			<input id="ageSlider" type="range" min=1 max=150 value=1 onchange="displayValue('age', this.value);"></input>
+            <input id="age" type="number" value="" onchange="ageSlider.value = this.value;"></input>
 		</div>
 	</div>
 
-	<div class='outputContainer'>
-            <button id='generateWish' onclick="generateMessage();">Generate<br/>Wish</button><br/>
-            <h2 id='wishPrompt'>Here is your wish! Take a picture and share it!</h2>
-            <img id="banner" src="pictures/top.png">
-            <span id="wishView"></span>
-            <img id="banner" src="pictures/bottom.png">
+	<div id="bottom" class="container">
+            <button id="generateWish" onclick="generateWish();">Generate<br/>Wish</button><br/>
+            <h5 id="wishPrompt"></h5>
+            <img id="topImage">
+            <span id="wish"></span>
+            <img id="bottomImage">
 	</div>
 
 </body>
-	<script type="text/javascript" src="js/birthdayWish.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
 </html>
