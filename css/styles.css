@@ -29,8 +29,13 @@ body {
     align-items: flex-start
 }
 
+#middle {
+    align-items: flex-start
+}
+
 #bottom {
     flex-direction: column;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -50,7 +55,7 @@ input {
 }
 
 button {
-    background-color: rgb(204, 180, 180);
+    background-color: white
     border: 2px solid white;
     color: white;
     border-radius: 8px;
@@ -65,32 +70,62 @@ button {
     transition-property: transform, color, border;
 }
 
-button:hover {
-    color: black;
-}
-
-#Red {
+#backgroundRed {
     background-color: red;
 }
-#Blue {
+#backgroundBlue {
     background-color: blue;
 }
-#Green {
+#backgroundGreen {
     background-color: green;
 }
-#Pink {
+#backgroundPink {
     background-color: magenta;
 }
-#Orange {
+#backgroundOrange {
     background-color: orangered;
 }
-#Purple {
+#backgroundPurple {
     background-color: purple;
+}
+#textRed {
+    border: 2px solid red;
+    color: red;
+}
+#textBlue {
+    border: 2px solid blue;
+    color: blue;
+}
+#textGreen {
+    border: 2px solid green;
+    color: green;
+}
+#textPink {
+    border: 2px solid magenta;
+    color: magenta;
+}
+#textOrange {
+    border: 2px solid orangered;
+    color: orangered;
+}
+#textPurple {
+    border: 2px solid purple;
+    color: purple;
 }
 #generateWish {
     width: 94px;
-    color: black;
-    border: 2px solid rgb(204, 180, 180);
+    background-color: grey;
+}
+
+form {
+    text-align: left;
+}
+
+#textForm {
+    padding-left: 78px;
+}
+#backgroundForm {
+    padding-left: 42px;
 }
 
 span {

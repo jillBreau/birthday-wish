@@ -11,31 +11,61 @@
 	<h1 id="titleHeader">Wish someone a Happy Birthday!!</h1>
 	<div id="top" class="container">
 		<div class="inputSection">
-			<h3>Name:</h3>
+			<h3>Their name:</h3>
             <input id="name" type="text" value=""></input> 
         </div>
         
 		<div class="inputSection">
-			<h3>Age:</h3>
+			<h3>Their age:</h3>
 			<input id="ageSlider" type="range" min=1 max=150 value=1 class="slider" onchange="displayValue('age', this.value);"></input>
             <input id="age" type="number" value="" onchange="ageSlider.value = this.value;"></input>
 		</div>
+	</div>
+
+	<div id="middle" class="container">
+		<div class="inputSection">
+			<h3>Text:</h3>
+			<form id="textForm" action="/action_page.php">
+				<input type="radio" id="solidText" name="text" value="textSolid" onchange="updateTextType('solid');">
+				<label for="textSolid">Solid</label><br>
+				<input type="radio" id="outlineText" name="text" value="textOutline" onchange="updateTextType('outline');">
+				<label for="textOutline">Outline</label>
+			</form>
+		</div>
 
 		<div class="inputSection">
-			<h3>Colour:</h3>
-			<button id="Red">Red</button><button id="Blue">Blue</button></br>
-			<button id="Green">Green</button><button id="Pink">Pink</button></br>
-			<button id="Orange">Orange</button><button id="Purple">Purple</button>
+			<h3>Text Colour:</h3>
+			<button id="textRed">Red</button><button id="textBlue">Blue</button></br>
+			<button id="textGreen">Green</button><button id="textPink">Pink</button></br>
+			<button id="textOrange">Orange</button><button id="textPurple">Purple</button>
+			
+		</div>
+        
+		<div class="inputSection">
+			<h3>Background:</h3>
+			<form id="backgroundForm" action="/action_page.php">
+				<input type="radio" id="solidBack" name="background" value="backSolid" onchange="updateBackgroundType('solid');">
+				<label for="backSolid">Solid</label><br>
+				<input type="radio" id="gradientBack" name="background" value="backGradient" onchange="updateBackgroundType('gradient');">
+				<label for="backGradient">Gradient</label>
+			</form>
+		</div>
+
+		<div class="inputSection">
+			<h3>Background Colour:</h3>
+			<button id="backgroundRed">Red</button><button id="backgroundBlue">Blue</button></br>
+			<button id="backgroundGreen">Green</button><button id="backgroundPink">Pink</button></br>
+			<button id="backgroundOrange">Orange</button><button id="backgroundPurple">Purple</button>
 			
 		</div>
 	</div>
 
 	<div id="bottom" class="container">
-            <button id="generateWish" onclick="generateWish();">Generate<br/>Wish</button><br/>
-            <h5 id="wishPrompt"></h5>
-            <img id="topImage">
-            <span id="wish"></span>
-            <img id="bottomImage">
+		<button id="generateWish" onclick="drawWish();">Generate<br/>Wish</button><br/>
+		<canvas id="wishCanvas" width="516" height="375"></canvas>
+		<div style="display:none;">
+			<img id="wishImage" src="pictures/balloon_banner.png">
+		</div>
 	</div>
 
 </body>
