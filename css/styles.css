@@ -84,8 +84,21 @@ input {
     margin: 8px;
 }
 
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px 2px rgb(97, 99, 99);
+}
+
 #ageSlider {
     cursor: pointer;
+}
+
+#ageSlider:focus {
+    box-shadow: none;
+}
+
+#ageSlider:focus::-webkit-slider-thumb {
+    box-shadow: 0px 0px 3px 2px rgb(97, 99, 99);
 }
 
 button {
@@ -104,7 +117,8 @@ button:hover {
 }
 
 button:focus {
-    outline: thin dotted;
+    outline: none;
+    box-shadow: 0px 0px 3px 3px rgb(97, 99, 99);
 }
 
 #backgroundRed {
