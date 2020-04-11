@@ -2,6 +2,8 @@ var textType = "solid";
 var textColour = "black";
 var backgroundType = "solid";
 var backgroundColour = "grey";
+var besideBday = "!"
+var besideName = ""
 
 function displayValue(element, value) {
     document.getElementById(element).value = value;
@@ -28,18 +30,28 @@ function drawWish() {
     context.fillRect(0, 0, 516, 375);
     context.drawImage(image, 0, 0);
 
-    context.font = "40px Calibri";
+    context.font = '40px Candara';
     context.textAlign = "center";
+
+    if (name) {
+        besideBday = "";
+        besideName = "!";
+    } else {
+        besideBday = "!";
+        besideName = "";
+    }
 
     if (textType == "solid") {
         context.fillStyle = textColour;
-        context.fillText(`Happy ${ageSuffix}`, 258, 250);
-        context.fillText(`Birthday ${name}!!`, 258, 300);
+        context.fillText(`Happy`, 258, 200);
+        context.fillText(`${ageSuffix} Birthday${besideBday}`, 258, 250);
+        context.fillText(`${name}${besideName}`, 258, 300);
     } else {
         context.strokeStyle = textColour;
         context.lineWidth = "1.5";
-        context.strokeText(`Happy ${ageSuffix}`, 258, 250);
-        context.strokeText(`Birthday ${name}!!`, 258, 300);
+        context.strokeText(`Happy`, 258, 200);
+        context.strokeText(`${ageSuffix} Birthday${besideBday}`, 258, 250);
+        context.strokeText(`${name}${besideName}`, 258, 300);
     }
 
 };
@@ -62,56 +74,76 @@ function ordinalSuffix(i) {
     return i + "th";
 };
 
+function ageSliderChange(value) {
+    displayValue('age', value); 
+    drawWish();
+};
+
+function ageInputChange(value) {
+    displayValue('ageSlider', value);
+    drawWish();
+};
+
 function updateTextType(type) {
     textType = type;
+    drawWish();
 };
 
 textRed.onclick = () => setTextColour('textRed', 'red');
 textBlue.onclick = () => setTextColour('textBlue', 'blue');
+textYellow.onclick = () => setTextColour('textYellow', 'yellow');
 textGreen.onclick = () => setTextColour('textGreen', 'green');
 textPink.onclick = () => setTextColour('textPink', 'magenta');
+textBlack.onclick = () => setTextColour('textBlack', 'black');
 textOrange.onclick = () => setTextColour('textOrange', 'orangered');
 textPurple.onclick = () => setTextColour('textPurple', 'purple');
+textWhite.onclick = () => setTextColour('textWhite', 'white');
 
 function setTextColour(button, colour) {
     resetTextButtons();
-    document.getElementById(button).style.backgroundColor = 'rgb(180, 180, 180)';
+    document.getElementById(button).style.backgroundColor = colour;
+
     textColour = colour;
+    drawWish();
 };
 
 function resetTextButtons() {
-    const textButtons = ["textRed", "textBlue", "textGreen",
-                                "textPink", "textOrange", "textPurple"];
+    const textButtons = ["textRed", "textBlue", "textYellow", "textGreen",
+                        "textPink", "textBlack", "textOrange", "textPurple", "textWhite"];
 
     for (button of textButtons) {
-        document.getElementById(button).style.backgroundColor = 'white';
+        document.getElementById(button).style.backgroundColor = 'rgb(175, 178, 178)';
     }
 };
 
 function updateBackgroundType(type) {
     backgroundType = type;
+    drawWish();
 };
 
 backgroundRed.onclick = () => setBackgroundColour('backgroundRed', 'red');
 backgroundBlue.onclick = () => setBackgroundColour('backgroundBlue', 'blue');
+backgroundYellow.onclick = () => setBackgroundColour('backgroundYellow', 'yellow');
 backgroundGreen.onclick = () => setBackgroundColour('backgroundGreen', 'green');
 backgroundPink.onclick = () => setBackgroundColour('backgroundPink', 'magenta');
+backgroundBlack.onclick = () => setBackgroundColour('backgroundBlack', 'black');
 backgroundOrange.onclick = () => setBackgroundColour('backgroundOrange', 'orangered');
 backgroundPurple.onclick = () => setBackgroundColour('backgroundPurple', 'purple');
+backgroundWhite.onclick = () => setBackgroundColour('backgroundWhite', 'white');
 
 function setBackgroundColour(button, colour) {
     resetBackgroundButtons();
-    document.getElementById(button).style.border = '2px solid black';
-    document.getElementById(button).style.color = 'black';
+    document.getElementById(button).style.border = `6px solid ${colour}`;
+
     backgroundColour = colour;
+    drawWish();
 };
 
 function resetBackgroundButtons() {
-    const backgroundButtons = ["backgroundRed", "backgroundBlue", "backgroundGreen",
-                                "backgroundPink", "backgroundOrange", "backgroundPurple"];
+    const backgroundButtons = ["backgroundRed", "backgroundBlue", "backgroundYellow", "backgroundGreen",
+                                "backgroundPink", "backgroundBlack", "backgroundOrange", "backgroundPurple", "backgroundWhite"];
 
-    for (button of backgroundButtons) {
-        document.getElementById(button).style.border = '2px solid white';
-        document.getElementById(button).style.color = 'white';
+    for (buttonColor of backgroundButtons) {
+        document.getElementById(buttonColor).style.border = '6px solid rgb(175, 178, 178)';
     }
 };
