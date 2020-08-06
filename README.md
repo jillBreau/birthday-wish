@@ -7,7 +7,7 @@ A simple site with a few options to personalize a birthday wish for someone. **C
 .<br />
 .<br />
 
-Uses Javascript, HTML Canvas
+Uses Javascript, HTML Canvas, CSS
 
 .<br />
 .<br />
